@@ -10,6 +10,7 @@ export class PostsController extends BaseController {
       .get('/:id', this.getById)
       .use(Auth0Provider.getAuthorizedUserInfo)
       .post('', this.create)
+      .put('/:id', this.edit)
       .delete('/:id', this.remove)
   }
 
@@ -43,6 +44,13 @@ export class PostsController extends BaseController {
     } catch (error) {
       next(error)
     }
+  }
+
+  async edit(req, res, next) {
+    req.body.creatorId = req.userInfo.id
+    req.body.id = req.params.id
+    const post = await postsService.edit(req.body)
+    return res.send(post)
   }
 
   async remove(req, res, next) {

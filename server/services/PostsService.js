@@ -22,6 +22,15 @@ class PostsService {
     return post
   }
 
+  async edit(body) {
+    const post = await this.getById(body.id)
+    if (post.creatorId.toString() !== body.creatorId) {
+      throw new Forbidden('Access Denied')
+    }
+    const update = dbContext.Posts.findByIdAndUpdate(body.id, body, { new: true })
+    return update
+  }
+
   async remove(id, userId) {
     const found = await this.getById(id)
     if (found.creatorId.toString() !== userId) {
