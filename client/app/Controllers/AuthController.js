@@ -19,23 +19,7 @@ function _drawAuthSettings() {
   const elem = document.getElementById('auth-settings')
   if (!elem) { return }
   elem.innerHTML = /* html */`
-  <div class="card p-2 elevation-4">
-    <div class="card-title p-2">
-      <div class="d-flex align-items-center">
-        <div class="avatar">
-          <img src="https://avatars.githubusercontent.com/u/2824157?s=280&v=4" alt="user" height="45" class="rounded-circle">
-        </div>
-        <div class="text mx-2">
-          <b>Auth0 Settings</b>
-        </div>
-      </div>
-    </div>
-    <div class="card-body border-top">
-      <div class="text block"><b>Domain:</b> ${domain}</div>
-      <div class="text block"><b>Audience:</b> ${audience}</div>
-      <div class="text block"><b>Client Id:</b> ${clientId}</div>
-    </div>
-  </div>
+  
 `
 }
 
@@ -68,7 +52,7 @@ function authButton(user) {
   if (AuthService.loading) { return '' }
   return user.isAuthenticated
     ? /* html */ `
-    <button class="btn btn-small btn-dark text-muted" onclick="app.authController.logout()">✖</button>
+    <button class="btn btn-small btn-secondary text-dark h-50 w-25 mt-2 ms-3 f-10 p-0" onclick="app.authController.logout()">Log Out</button>
   `
     : /* html */ `
     <button class="btn btn-dark" onclick="app.authController.login()">login</button>

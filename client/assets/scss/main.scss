@@ -3,6 +3,7 @@
 @import "./_overrides.scss";
 @import "./custom.scss";
 @import "./loaders.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 body {
   display: flex;
@@ -11,9 +12,44 @@ body {
   background-color: $body-bg;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.sticky {
+    position: sticky;
+    top: 4em;
+    z-index: 1000;
+}
+
 main {
   flex-grow: 1;
 }
 
+.custom-font {
+  font-family: 'Bebas Neue', cursive;
+}
 
+img{
+  margin:1px;
+}
 
+#lg img {
+min-height: 75vh;
+max-height: 75vh;
+min-width: 75vh;
+max-width: 75vh;
+}
+#md img {
+min-height: 50vh;
+max-height: 50vh;
+min-width: 50vh;
+max-width: 50vh;
+}
+#sm img {
+min-height: 25vh;
+max-height: 25vh;
+min-width: 25vh;
+max-width: 25vh;
+}
