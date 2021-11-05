@@ -52,7 +52,7 @@ function authButton(user) {
   if (AuthService.loading) { return '' }
   return user.isAuthenticated
     ? /* html */ `
-    <button class="btn btn-small btn-primary text-dark h-50 mt-2 ms-3 f-10" onclick="app.authController.logout()">Log Out</button>
+    <button class="btn btn-small btn-secondary text-dark h-50 w-25 mt-2 ms-3 f-10 p-0" onclick="app.authController.logout()">Log Out</button>
   `
     : /* html */ `
     <button class="btn btn-dark" onclick="app.authController.login()">login</button>

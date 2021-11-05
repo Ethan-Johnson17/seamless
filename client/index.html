@@ -11,9 +11,11 @@
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <title>Seamless</title>
+
 </head>
 
 <body>
+
   <header class="container-fluid bg-dark text-light">
     <div class="row ">
       <div class="col-md-4 d-flex mt-2" id="authstate">
@@ -22,148 +24,166 @@
       <div class="col-md-8 text-end">
         <h1 class="custom-font mt-2">Seamless</h1>
       </div>
-      <div class="container">
-        <div class="row d-flex text-dark">
-          <div class="col-md-6 text-start">
-
-            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-              aria-controls="offcanvasExample">
-              <i class="mdi mdi-menu"></i>
-            </a>
-
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
-              aria-labelledby="offcanvasExampleLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter posts:</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                  aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul>
-                  <!-- TODO query parameters for filtering tags -->
-                  <li><a class="dropdown-item" href="?tag=NATURE">NATURE</a></li>
-                  <li><a class="dropdown-item" href="?tag=SPORTS">SPORTS</a></li>
-                  <li><a class="dropdown-item" href="?tag=VIDEO+GAMES">VIDEO GAMES</a></li>
-                  <li><a class="dropdown-item" href="?tag=TECH">TECH</a></li>
-                  <li><a class="dropdown-item" href="?tag=NEWS">NEWS</a></li>
-                  <li><a class="dropdown-item" href="?tag=WRITING">WRITING</a></li>
-                  <li><a class="dropdown-item" href="?tag=OTHER">OTHER</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-md-6 text-end my-1">
-
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-              data-bs-whatever="@mdo">Create Post</button>
-
-            <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Image URL:</label>
-                        <input class="form-control" id="image-link" type="url"></input>
-                      </div>
-
-                      <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Post Body:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                      </div>
-
-
-
-                      <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Choose a tag:
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
-
-                          <div class="form-check m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              NATURE
-                            </label>
-                          </div>
-                          <div class="form-check m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                              SPORTS
-                            </label>
-                          </div>
-                          <div class="form-check m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              VIDEO GAMES
-                            </label>
-                          </div>
-                          <div class="form-check m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                              TECH
-                            </label>
-                          </div>
-                          <div class="form-check m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
-                            <label class="form-check-label" for="flexRadioDefault1">
-                              NEWS
-                            </label>
-                          </div>
-                          <div class="form-check m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                              WRITING
-                            </label>
-                          </div>
-                          <div class="form-check m-1 m-1">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
-                            <label class="form-check-label" for="flexRadioDefault2">
-                              OTHER
-                            </label>
-                          </div>
-                      </div>
-
-
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Submit</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
 
 
     </div>
     </div>
   </header>
   <main id="app">
-    <div class="container-fluid">
-      <div class="row my-3">
+    <div class="container-fluid sticky">
+      <div class="row d-flex text-dark">
+        <div class="col-md-6 text-start">
+          <a class="btn m-1 border border-dark border-rounded" data-bs-toggle="offcanvas" href="#offcanvasExample"
+            role="button" aria-controls="offcanvasExample">
+            <i class="mdi mdi-menu"></i>
+          </a>
 
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filter posts:</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul>
+                <!-- TODO query parameters for filtering tags -->
+                <li><a class="dropdown-item" href="?tag=NATURE">NATURE</a></li>
+                <li><a class="dropdown-item" href="?tag=SPORTS">SPORTS</a></li>
+                <li><a class="dropdown-item" href="?tag=VIDEO+GAMES">VIDEO GAMES</a></li>
+                <li><a class="dropdown-item" href="?tag=TECH">TECH</a></li>
+                <li><a class="dropdown-item" href="?tag=NEWS">NEWS</a></li>
+                <li><a class="dropdown-item" href="?tag=WRITING">WRITING</a></li>
+                <li><a class="dropdown-item" href="?tag=OTHER">OTHER</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-6 text-end my-1">
+
+          <button type="button" class="btn border border-dark border-rounded" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" data-bs-whatever="@mdo"><i class="mdi mdi-plus"></i> </button>
+
+          <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">New Post</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Image URL:</label>
+                      <input class="form-control" id="image-link" type="url"></input>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="message-text" class="col-form-label">Post Body:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+
+
+
+                    <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Choose a tag:
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+
+                        <div class="form-check m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            NATURE
+                          </label>
+                        </div>
+                        <div class="form-check m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            SPORTS
+                          </label>
+                        </div>
+                        <div class="form-check m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            VIDEO GAMES
+                          </label>
+                        </div>
+                        <div class="form-check m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            TECH
+                          </label>
+                        </div>
+                        <div class="form-check m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            NEWS
+                          </label>
+                        </div>
+                        <div class="form-check m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            WRITING
+                          </label>
+                        </div>
+                        <div class="form-check m-1 m-1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            OTHER
+                          </label>
+                        </div>
+                    </div>
+
+
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row h-50 m-1 justify-content-around" id="lg">
+        <div class="col-md-6"><img src="http://thiscatdoesnotexist.com"> </div>
+        <div class="col-md-6"><img src="http://thiscatdoesnotexist.com"></div>
+        <div class="col-md-6"><img src="http://thiscatdoesnotexist.com"></div>
+      </div>
+      <div class="row md h-25 justify-content-around" id="md">
+        <div class="col-md-4"><img src="http://thiscatdoesnotexist.com" class="md-img"> </div>
+        <div class="col-md-4"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+        <div class="col-md-4"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+      </div>
+      <div class="row md h-25 justify-content-around" id="sm">
+        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"> </div>
+        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
       </div>
     </div>
   </main>
   <footer class="container-fluid bg-dark text-light">
     <div class="row text-center">
       <div class="col">
-        <p><small>Made with 💖 by CodeWorks</small></p>
+        <!-- TODO fill out githubs -->
+        <p><small>Made with 💖 by <a href="https://github.com/tristanfj">Tristan</a>, <a
+              href="https://github.com/donlynfgi">Don</a>, <a href="https://github.com/ethan-johnson17">Ethan</a>, <a
+              href="https://github.com/ryanmera3">Ryan</a>, <a href="https://github.com/Jarrod-Payton">Jarrod</a>
+          </small></p>
       </div>
     </div>
   </footer>

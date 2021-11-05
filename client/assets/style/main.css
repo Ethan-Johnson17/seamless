@@ -14098,12 +14098,49 @@ body {
   background-color: #FCF7F8;
 }
 
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.sticky {
+  position: sticky;
+  top: 4em;
+  z-index: 1000;
+}
+
 main {
   flex-grow: 1;
 }
 
 .custom-font {
   font-family: "Bebas Neue", cursive;
+}
+
+img {
+  margin: 1px;
+}
+
+#lg img {
+  min-height: 75vh;
+  max-height: 75vh;
+  min-width: 75vh;
+  max-width: 75vh;
+}
+
+#md img {
+  min-height: 50vh;
+  max-height: 50vh;
+  min-width: 50vh;
+  max-width: 50vh;
+}
+
+#sm img {
+  min-height: 25vh;
+  max-height: 25vh;
+  min-width: 25vh;
+  max-width: 25vh;
 }
 
 /*# sourceMappingURL=main.css.map */
