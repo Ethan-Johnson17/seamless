@@ -14,6 +14,12 @@ class PostsService {
     const posts = res.data.map(p => new Post(p))
     ProxyState.posts = posts
   }
+
+  async getPostById(postId) {
+    const foundPost = ProxyState.posts.find(p => p.id == postId)
+    logger.log(foundPost)
+    return foundPost
+  }
 }
 
 export const postsService = new PostsService()
