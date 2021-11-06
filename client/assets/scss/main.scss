@@ -9,13 +9,19 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: $body-bg;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(207,207,207,1) 0%, rgba(140,140,153,1) 100%);
+
+}
+
+.card{
+border:none !important;
 }
 
 header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 500;
 }
 
 main {
@@ -27,24 +33,35 @@ main {
 }
 
 img{
-  margin:1px;
+  margin:2px;
 }
 
 #lg img {
-min-height: 75vh;
-max-height: 75vh;
-min-width: 75vh;
-max-width: 75vh;
+// min-height: 25vh;
+// max-height: 25vh;
+// min-width: 25vw;
+// max-width: 25vw;
 }
 #md img {
-min-height: 50vh;
-max-height: 50vh;
-min-width: 50vh;
-max-width: 50vh;
+// min-height: 15vh;
+// max-height: 15vh;
+// min-width: 20vw;
+// max-width: 20vw;
 }
 #sm img {
-min-height: 25vh;
-max-height: 25vh;
-min-width: 25vh;
-max-width: 25vh;
+// min-height: 10vh;
+// max-height: 10vh;
+// min-width: 15vw;
+// max-width: 15vw;
+}
+
+#featured{
+  text-decoration: underline;
+}
+
+.bg-img {
+  background-image: url(http://thiscatdoesnotexist.com);
+  // background-image: cover;  
+//   max-height: auto;
+//   min-height: 35vh;
 }
