@@ -14109,12 +14109,6 @@ header {
   z-index: 500;
 }
 
-.sticky {
-  position: sticky;
-  top: 4em;
-  z-index: 500;
-}
-
 main {
   flex-grow: 1;
 }
