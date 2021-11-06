@@ -7,9 +7,9 @@ function _drawPosts() {
   let mdRow = ''
   let smRow = ''
   ProxyState.posts.forEach(p => {
-    if (p.size() === '2') {
+    if (p.size() === '1') {
       smRow += p.Template
-    } else if (p.size() === '4') {
+    } else if (p.size() === '2') {
       mdRow += p.Template
     } else {
       lgRow += p.Template
@@ -20,10 +20,14 @@ function _drawPosts() {
   document.getElementById('sm').innerHTML = smRow
 }
 
+function drawModal(post) {
+  document.getElementById('postStuff').innerHTML = post.ModalTemplate
+}
+
 export class PostsController {
   constructor() {
     ProxyState.on('posts', _drawPosts)
-    // this.getPosts()
+    this.getPosts()
     _drawPosts()
   }
 
@@ -32,6 +36,15 @@ export class PostsController {
       await postsService.getPosts()
     } catch (error) {
       logger.error('[get posts]', error.message)
+    }
+  }
+
+  async getPostById(postId) {
+    try {
+      const post = await postsService.getPostById(postId)
+      drawModal(post)
+    } catch (error) {
+      logger.error(error)
     }
   }
 }
