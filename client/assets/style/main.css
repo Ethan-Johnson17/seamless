@@ -14095,19 +14095,24 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #FCF7F8;
+  background: #020024;
+  background: radial-gradient(circle, #020024 0%, #cfcfcf 0%, #8c8c99 100%);
+}
+
+.card {
+  border: none !important;
 }
 
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 500;
 }
 
 .sticky {
   position: sticky;
   top: 4em;
-  z-index: 1000;
+  z-index: 500;
 }
 
 main {
@@ -14119,28 +14124,15 @@ main {
 }
 
 img {
-  margin: 1px;
+  margin: 2px;
 }
 
-#lg img {
-  min-height: 75vh;
-  max-height: 75vh;
-  min-width: 75vh;
-  max-width: 75vh;
+#featured {
+  text-decoration: underline;
 }
 
-#md img {
-  min-height: 50vh;
-  max-height: 50vh;
-  min-width: 50vh;
-  max-width: 50vh;
-}
-
-#sm img {
-  min-height: 25vh;
-  max-height: 25vh;
-  min-width: 25vh;
-  max-width: 25vh;
+.bg-img {
+  background-image: url(http://thiscatdoesnotexist.com);
 }
 
 /*# sourceMappingURL=main.css.map */

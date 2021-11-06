@@ -30,7 +30,7 @@
     </div>
   </header>
   <main id="app">
-    <div class="container-fluid sticky">
+    <div class="container-fluid">
       <div class="row d-flex text-dark">
         <div class="col-md-6 text-start">
           <a class="btn m-1 border border-dark border-rounded" data-bs-toggle="offcanvas" href="#offcanvasExample"
@@ -155,24 +155,40 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="row h-50 m-1 justify-content-around" id="lg">
-        <div class="col-md-6"><img src="http://thiscatdoesnotexist.com"> </div>
-        <div class="col-md-6"><img src="http://thiscatdoesnotexist.com"></div>
-        <div class="col-md-6"><img src="http://thiscatdoesnotexist.com"></div>
+    <div class="container-fluid">
+      <div class="row h-50 m-1 justify-content-center text-center" id="lg">
+        <h2 id="featured">Featured:</h2>
+        <!-- <button type="button" class="col-md-2"><img src="http://thiscatdoesnotexist.com" data-bs-toggle="modal"
+            data-bs-target="#postInfo" data-bs-whatever="@mdo"></button> -->
+        <div class="col-md-3 card px-0 m-3 border-0"><img src="http://thiscatdoesnotexist.com"
+            class="rounded shadow m-0"></div>
+        <div class="col-md-3 card px-0 m-3"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0">
+        </div>
+        <div class="col-md-3 card px-0 m-3"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0">
+        </div>
       </div>
-      <div class="row md h-25 justify-content-around" id="md">
-        <div class="col-md-4"><img src="http://thiscatdoesnotexist.com" class="md-img"> </div>
-        <div class="col-md-4"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
-        <div class="col-md-4"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+      <div class="row h-25 justify-content-center text-center" id="md">
+        <div class="col-md-2 card px-0 m-2 "><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 ">
+        </div>
+        <div class="col-md-2 card px-0 m-2"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-2 card px-0 m-2"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-2 card px-0 m-2"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-2 card px-0 m-2"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
       </div>
-      <div class="row md h-25 justify-content-around" id="sm">
-        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"> </div>
-        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
-        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
-        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
-        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
-        <div class="col-md-2"><img src="http://thiscatdoesnotexist.com" class="md-img"></div>
+      <div class="row h-25 justify-content-center text-center" id="sm">
+        <h3></h3>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 ">
+        </div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
+        <div class="col-md-1 card px-0 m-1"><img src="http://thiscatdoesnotexist.com" class="rounded shadow m-0 "></div>
       </div>
     </div>
   </main>
@@ -187,6 +203,61 @@
       </div>
     </div>
   </footer>
+  <div class="modal max-vw-100 min-vw-100 w-100" id="postInfo" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-img ratio ratio-1x1">
+          <div class="d-flex justify-content-end align-items-start">
+            <button type="button" class="btn-close float-end p-2 m-3 selectable" data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="modal-body container">
+          <div class="row">
+            <div class="col-md-12">
+              <p><b>Joe mama's picture</b>This is what the picture is all about!</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12"><b>Your friend</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              quidem hic
+              assumenda eaque sunt voluptatum doloribus quis aliquid sit voluptate modi repudiandae, reprehenderit
+              laudantium voluptates harum excepturi ipsum architecto placeat?
+            </div>
+            <div class="col-md-12"><b>Your friend</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              quidem hic
+              assumenda eaque sunt voluptatum doloribus quis aliquid sit voluptate modi repudiandae, reprehenderit
+              laudantium voluptates harum excepturi ipsum architecto placeat?
+            </div>
+            <div class="col-md-12"><b>Your friend</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
+              quidem hic
+              assumenda eaque sunt voluptatum doloribus quis aliquid sit voluptate modi repudiandae, reprehenderit
+              laudantium voluptates harum excepturi ipsum architecto placeat?
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer container-fluid">
+          <div class="row justify-content-end">
+            <div class="col-md-12">
+              <form action="">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" aria-label="Sizing example input" placeholder="New Comment..."
+                    aria-describedby="inputGroup-sizing-default">
+                </div>
+              </form>
+            </div>
+            <div class="col-md-3 text-end">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.15/auth0-spa-js.production.js"></script>
