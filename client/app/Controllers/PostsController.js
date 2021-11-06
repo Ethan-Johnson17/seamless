@@ -1,4 +1,5 @@
 import { ProxyState } from '../AppState.js'
+import { commentsService } from '../Services/CommentsService.js'
 import { postsService } from '../Services/PostsService.js'
 import { logger } from '../Utils/Logger.js'
 
@@ -39,12 +40,17 @@ export class PostsController {
     }
   }
 
-  async getPostById(postId) {
+  async getPostData(postId) {
     try {
       const post = await postsService.getPostById(postId)
+      await commentsService.getCommentsByPostId(postId)
       drawModal(post)
     } catch (error) {
       logger.error(error)
     }
   }
+
+  // async query(str) {
+  //   await postsService.query(str)
+  // }
 }

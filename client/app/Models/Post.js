@@ -13,7 +13,7 @@ export class Post {
     return `
     <div class="col-md-${this.size()} card px-0 m-${this.size()} border-0"><img src="${this.image}"
     class="rounded shadow m-0" data-bs-toggle="modal"
-    data-bs-target="#postInfo" onclick="app.postsController.getPostById('${this.id}')"></div>`
+    data-bs-target="#postInfo" onclick="app.postsController.getPostData('${this.id}')"></div>`
   }
 
   get ModalTemplate() {
@@ -30,22 +30,7 @@ export class Post {
       </div>
     </div>
     <div class="row" id="comments">
-      <div class="col-md-12"><b>Your friend</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        quidem hic
-        assumenda eaque sunt voluptatum doloribus quis aliquid sit voluptate modi repudiandae, reprehenderit
-        laudantium voluptates harum excepturi ipsum architecto placeat?
-      </div>
-      <div class="col-md-12"><b>Your friend</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        quidem hic
-        assumenda eaque sunt voluptatum doloribus quis aliquid sit voluptate modi repudiandae, reprehenderit
-        laudantium voluptates harum excepturi ipsum architecto placeat?
-      </div>
-      <div class="col-md-12"><b>Your friend</b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-        quidem hic
-        assumenda eaque sunt voluptatum doloribus quis aliquid sit voluptate modi repudiandae, reprehenderit
-        laudantium voluptates harum excepturi ipsum architecto placeat?
-      </div>
-
+  
     </div>
   </div>
     <div class="row mx-auto align-items-center" style="min-height: 10vh;">

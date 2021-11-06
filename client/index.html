@@ -48,13 +48,13 @@
             <div class="offcanvas-body">
               <ul>
                 <!-- TODO query parameters for filtering tags -->
-                <li><a class="dropdown-item" href="?tag=NATURE">NATURE</a></li>
-                <li><a class="dropdown-item" href="?tag=SPORTS">SPORTS</a></li>
-                <li><a class="dropdown-item" href="?tag=VIDEO+GAMES">VIDEO GAMES</a></li>
-                <li><a class="dropdown-item" href="?tag=TECH">TECH</a></li>
-                <li><a class="dropdown-item" href="?tag=NEWS">NEWS</a></li>
-                <li><a class="dropdown-item" href="?tag=WRITING">WRITING</a></li>
-                <li><a class="dropdown-item" href="?tag=OTHER">OTHER</a></li>
+                <li><a class="dropdown-item" href="?tag=NATURE" onclick="app.postsController.query('NATURE')">NATURE</a></li>
+                <li><a class="dropdown-item" href="?tag=SPORTS" onclick="app.postsController.query('SPORTS')">SPORTS</a></li>
+                <li><a class="dropdown-item" href="?tag=VIDEO+GAMES" onclick="app.postsController.query('VIDEO-GAMES')">VIDEO GAMES</a></li>
+                <li><a class="dropdown-item" href="?tag=TECH" onclick="app.postsController.query('TECH')">TECH</a></li>
+                <li><a class="dropdown-item" href="?tag=NEWS" onclick="app.postsController.query('NEWS')">NEWS</a></li>
+                <li><a class="dropdown-item" href="?tag=WRITING" onclick="app.postsController.query('WRITING')">WRITING</a></li>
+                <li><a class="dropdown-item" href="?tag=OTHER" onclick="app.postsController.query('OTHER')">OTHER</a></li>
               </ul>
             </div>
           </div>
@@ -94,34 +94,32 @@
                         Choose a tag:
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-
-
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NATURE">
                           <label class="form-check-label" for="flexRadioDefault1">
                             NATURE
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="SPORTS">
                           <label class="form-check-label" for="flexRadioDefault2">
                             SPORTS
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="VIDEO-GAMES">
                           <label class="form-check-label" for="flexRadioDefault1">
                             VIDEO GAMES
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="TECH">
                           <label class="form-check-label" for="flexRadioDefault2">
                             TECH
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NEWS">
                           <label class="form-check-label" for="flexRadioDefault1">
                             NEWS
                           </label>
@@ -207,6 +205,7 @@
       </div>
     </div>
   </div>
+
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.15/auth0-spa-js.production.js"></script>

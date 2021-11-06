@@ -5,15 +5,27 @@ import { logger } from '../Utils/Logger.js'
 function _draw() {
   let template = ''
   const comments = ProxyState.comments
-  const elem = document.getElementById('comments')
-  comments.forEach(c => { template += `<div class="col-md-12">${c.body}</div>` })
-  elem.innerHTML = template
+  setTimeout(() => {
+    comments.forEach(c => {
+      template += `
+    <div class="col-md-12">
+        <div class="d-flex">
+        <img src="${c.creator.picture}" alt="">
+        <small>${c.creator.name}</small>
+      </div>
+      <p>${c.body}</p>
+      </div>
+      </div>
+    `
+    })
+    document.getElementById('comments').innerHTML = template
+  }, 100)
 }
 
 export class CommentsController {
   constructor() {
     logger.log('comments controller is working')
-    this.getComments()
+    // this.getComments()
     ProxyState.on('comments', _draw)
   }
 
