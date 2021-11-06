@@ -21,7 +21,7 @@ function _drawPosts() {
   document.getElementById('sm').innerHTML = smRow
 }
 
-function drawModal(post) {
+function _drawModal(post) {
   document.getElementById('postStuff').innerHTML = post.ModalTemplate
 }
 
@@ -44,13 +44,28 @@ export class PostsController {
     try {
       const post = await postsService.getPostById(postId)
       await commentsService.getCommentsByPostId(postId)
-      drawModal(post)
+      _drawModal(post)
     } catch (error) {
       logger.error(error)
     }
   }
 
-  // async query(str) {
-  //   await postsService.query(str)
-  // }
+  async createPost() {
+    window.event.preventDefault()
+    try {
+      const form = window.event.target
+      const newPost = {
+        image: form.image.value,
+        body: form.body.value,
+        tag: form.flexRadioDefault.value
+      }
+      logger.log(newPost)
+      await postsService.createPost(newPost)
+      form.reset()
+    } catch (error) {
+      logger.log(error.message)
+    } finally {
+      bootstrap.Modal.getOrCreateInstance('#exampleModal').hide()
+    }
+  }
 }

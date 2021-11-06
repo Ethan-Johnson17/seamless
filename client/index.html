@@ -75,18 +75,16 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form onsubmit="app.postsController.createPost()">
                     <div class="mb-3">
                       <label for="message-text" class="col-form-label">Image URL:</label>
-                      <input class="form-control" id="image-link" type="url"></input>
+                      <input name="image"class="form-control" id="image-link" type="url"></input>
                     </div>
 
                     <div class="mb-3">
                       <label for="message-text" class="col-form-label">Post Body:</label>
-                      <textarea class="form-control" id="message-text"></textarea>
+                      <textarea name="body" class="form-control" id="message-text"></textarea>
                     </div>
-
-
 
                     <div class="dropdown">
                       <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1"
@@ -95,43 +93,43 @@
                       </button>
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NATURE">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NATURE" value="NATURE">
                           <label class="form-check-label" for="flexRadioDefault1">
                             NATURE
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="SPORTS">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="SPORTS" value="SPORTS">
                           <label class="form-check-label" for="flexRadioDefault2">
                             SPORTS
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="VIDEO-GAMES">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="VIDEO-GAMES" value="VIDEO-GAMES">
                           <label class="form-check-label" for="flexRadioDefault1">
                             VIDEO GAMES
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="TECH">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="TECH" value="TECH">
                           <label class="form-check-label" for="flexRadioDefault2">
                             TECH
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NEWS">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NEWS" value="NEWS">
                           <label class="form-check-label" for="flexRadioDefault1">
                             NEWS
                           </label>
                         </div>
                         <div class="form-check m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="WRITING" value="WRITING">
                           <label class="form-check-label" for="flexRadioDefault2">
                             WRITING
                           </label>
                         </div>
                         <div class="form-check m-1 m-1">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="OTHER" value="OTHER">
                           <label class="form-check-label" for="flexRadioDefault2">
                             OTHER
                           </label>
@@ -139,12 +137,12 @@
                     </div>
 
 
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Submit</button>
-                </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -191,7 +189,6 @@
   <footer class="container-fluid bg-dark text-light">
     <div class="row text-center">
       <div class="col">
-        <!-- TODO fill out githubs -->
         <p><small>Made with 💖 by <a href="https://github.com/tristanfj">Tristan</a>, <a
               href="https://github.com/donlynfgi">Don</a>, <a href="https://github.com/ethan-johnson17">Ethan</a>, <a
               href="https://github.com/ryanmera3">Ryan</a>, <a href="https://github.com/Jarrod-Payton">Jarrod</a>

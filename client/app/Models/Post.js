@@ -5,7 +5,7 @@ export class Post {
     this.image = data.image
     this.likes = data.likes
     this.creatorId = data.creatorId
-    this.timestamps = data.timestamps
+    this.timestamps = data.createdAt
     this.id = data.id
   }
 
@@ -17,34 +17,40 @@ export class Post {
   }
 
   get ModalTemplate() {
-    return /* html */ `<div class="modal-header ratio ratio-1x1" style="background-image: url(${this.image})">
+    return /* html */ `
+    
+
+    <div class="modal-header ratio ratio-1x1" style="background-image: url(${this.image})">
     <div class="d-flex justify-content-end align-items-start">
       <button type="button" class="btn-close float-end p-2 m-3 selectable" data-bs-dismiss="modal"
         aria-label="Close"></button>
     </div>
   </div>
+  
   <div class="modal-body container">
     <div class="row">
       <div class="col-md-12">
-        <p><b>${this.tag}</b>${this.body}</p>
+        <p><b>${this.tag}</b></p>
+        <p>${this.body}</p>
       </div>
     </div>
     <div class="row" id="comments">
-  
     </div>
   </div>
+
     <div class="row mx-auto align-items-center" style="min-height: 10vh;">
       <div class="col-md-12 d-flex justify-content-between">
-        <form onsubmit="app.commentsController.makeComment(${this.id})">
+        <form onsubmit="app.commentsController.createComment('${this.id}')">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="Sizing example input" placeholder="New Comment..."
-              aria-describedby="inputGroup-sizing-default">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Post</button>
+            <input name="body" type="text" class="form-control" aria-label="Sizing example input" placeholder="New Comment..." 
+            aria-describedby="inputGroup-sizing-default"></input>
+              <button type="submit" class="btn btn-primary">Post</button>
               </div>
         </form>
       </div>
     </div>
+
+
   `
   }
 

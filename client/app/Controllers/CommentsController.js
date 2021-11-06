@@ -37,17 +37,19 @@ export class CommentsController {
     }
   }
 
-  async makeComment(postId) {
+  async createComment(postId) {
+    window.event.preventDefault()
     try {
-      window.event.preventDefault()
       const form = window.event.target
       const commentData = {
         // @ts-ignore
         body: form.body.value
       }
-      await commentsService.makeComment(commentData, postId)
+      logger.log(commentData)
+      await commentsService.createComment(postId, commentData)
+      form.reset()
     } catch (error) {
-      console.error(error)
+      logger.error(error.message)
     }
   }
 }

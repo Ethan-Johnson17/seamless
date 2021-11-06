@@ -22,6 +22,13 @@ class PostsService {
     return foundPost
   }
 
+  async createPost(newPost) {
+    const res = await api.post('api/posts', newPost)
+    const post = new Post(res.data)
+    logger.log('[NEW POST]: ', post)
+    ProxyState.posts = [...ProxyState.posts, post]
+  }
+
   // async query(str){
   //   const
   // }
