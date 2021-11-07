@@ -4,10 +4,11 @@ export class Comment {
     this.likes = data.likes
     this.postId = data.postId
     this.creatorId = data.creatorId
+    this.creator = data.creator || {}
   }
 
   get template() {
-    return `
+    return /* html */ `
     
     `
   }

@@ -16,10 +16,22 @@ class PostsService {
   }
 
   async getPostById(postId) {
-    const foundPost = ProxyState.posts.find(p => p.id == postId)
-    logger.log(foundPost)
+    const foundPost = ProxyState.posts.find(p => p.id === postId)
+    logger.log('found Post', foundPost)
+    ProxyState.foundPost = new Post(foundPost)
     return foundPost
   }
+
+  async createPost(newPost) {
+    const res = await api.post('api/posts', newPost)
+    const post = new Post(res.data)
+    logger.log('[NEW POST]: ', post)
+    ProxyState.posts = [...ProxyState.posts, post]
+  }
+
+  // async query(str){
+  //   const
+  // }
 }
 
 export const postsService = new PostsService()

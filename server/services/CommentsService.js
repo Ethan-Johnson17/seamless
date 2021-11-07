@@ -3,7 +3,7 @@ import { BadRequest, Forbidden } from '../utils/Errors'
 
 class CommentsService {
   async getByPostId(body) {
-    const comments = await dbContext.Comments.find(body)
+    const comments = await dbContext.Comments.find(body).populate('creator', 'name picture')
     return comments
   }
 

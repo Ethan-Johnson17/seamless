@@ -9,10 +9,15 @@ class CommentsService {
     logger.log(res.data)
   }
 
-  async makeComment(commentData, postId) {
-    const res = await api.post(`api/posts/${postId}`, commentData)
+  async createComment(postId, commentData) {
+    const res = await api.post(`api/posts/${postId}/comments`, commentData)
     const comment = new Comment(res.data)
     ProxyState.comments = [...ProxyState.comments, comment]
+  }
+
+  async getCommentsByPostId(postId) {
+    const res = await api.get(`api/posts/${postId}/comments`)
+    ProxyState.comments = res.data
   }
 }
 
